@@ -1,0 +1,28 @@
+{
+  "name": "chasingplastics",
+  "version": "1.0.0",
+  "description": "chasing plastics website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madhavgupta211/chasingplastics.git"
+  },
+  "keywords": [
+    "chasing",
+    "plastics",
+    "podcast",
+    "blogs"
+  ],
+  "author": "Madhav Gupta (madhavgupta211)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/madhavgupta211/chasingplastics/issues"
+  },
+  "homepage": "https://github.com/madhavgupta211/chasingplastics#readme",
+  "dependencies": {
+    "create-react-app": "^3.4.1"
+  }
+}
