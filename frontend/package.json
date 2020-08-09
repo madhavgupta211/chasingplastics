@@ -10,14 +10,10 @@
     "font-awesome": "^4.7.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-<<<<<<< HEAD
-    "react-scripts": "^3.4.1"
-=======
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "react-transition-group": "^4.4.1",
     "reactstrap": "^8.5.1"
->>>>>>> 81a683eaae3ad5e6d77c86b1e9ae6888d390c4ed
   },
   "scripts": {
     "start": "react-scripts start",
