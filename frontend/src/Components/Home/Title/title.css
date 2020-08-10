@@ -1,0 +1,47 @@
+.title-bg {
+    min-height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-row {
+    height: 100% !important;
+}
+
+.tiled-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.title-header {
+    font-family: 'Permanent Marker', cursive;
+    color: #006d77;
+    font-size: 4.8vw;
+}
+
+
+
+.title-text {
+    font-family: 'Overpass', sans-serif !important;
+    font-size: 2vw !important;
+    font-weight: 300 !important;
+    line-height: 3vw !important;
+}
+
+@media screen and (max-width: 768px) {
+    .title-header {
+        font-size: 9vw !important;
+    }
+
+    .title-text {
+        font-size: 4vw !important;
+        line-height: 6vw !important;
+    }
+
+    .tiled-image {
+        width: 80%;
+        padding-top: 85px ;
+    }
+
+}
