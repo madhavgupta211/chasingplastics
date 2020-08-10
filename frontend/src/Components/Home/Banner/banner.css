@@ -1,0 +1,114 @@
+.banner-bg {
+    background-image: url(../../../shared/picking\ plastic.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    max-height: 900px;
+    background-position: center;
+}
+
+.banner-row {
+    height: 100% !important;
+}
+
+.crystal-square {
+    height: 450px;
+    width: 450px;
+    background-color: rgba(237, 246, 249, 0.8);
+    position: relative;
+    left: 50px;
+    top: 110px;
+}
+
+.green-square {
+    height: 140px;
+    width: 140px;
+    position: absolute;
+    background-color: rgba(0, 109, 119, 0.89);
+    left: 400px;
+    top: 30px;
+}
+
+.podcast-green-square {
+    height: 320px;
+    width: 300px;
+    position: relative;
+    background-color: rgba(0, 109, 119, 0.89);
+    right: 50px;
+    bottom: 60px;
+}
+
+.crystal-heading {
+    font-family: 'Overpass', sans-serif;
+    color: #006d77;
+    font-weight: 200;
+    font-size: 45px;
+}
+
+.crystal-sub-text {
+    font-family: 'Overpass', sans-serif;
+    color: #A76E59;
+    font-weight: 200;
+    font-size: 1.4rem;
+}
+
+.crystal-column, .podcast-green-column {
+    display: inline-block;
+}
+
+.crystal-button {
+    font-family: 'Overpass', sans-serif !important;
+    color: #006d77 !important;
+    font-weight: 200 !important;
+    font-size: 1.4rem !important;
+}
+
+.podcast-green-heading {
+    font-family: 'Permanent Marker', cursive;
+    color: #edf6f9;
+}
+
+.podcast-green-sub-text {
+    font-family: 'Overpass', sans-serif !important;
+    color: #edf6f9 !important;
+    font-weight: 200 !important;
+}
+
+.podcast-green-button {
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    border-radius: 0px !important;
+    border-width: 3px !important;
+    font-family: 'Overpass', sans-serif !important;
+    color: #FFDDD2 !important;
+    border-color: #FFDDD2 !important;
+    font-size: x-large !important;
+    padding: 6px 7px 4px 7px !important;
+    text-decoration: none !important;
+}
+
+.podcast-green-button:hover {
+    color: #A76E59 !important;
+    border-color: #A76E59 !important;
+}
+
+.podcast-green-link {
+    font-family: 'Overpass', sans-serif !important;
+    color: #FFDDD2 !important;
+    font-weight: 200 !important;
+}
+
+.podcast-green-link:hover {
+    color: #FFDDD2 !important;
+}
+
+@media screen and (max-width: 873px) {
+    .crystal-column {
+        display: none;
+    }
+
+    .podcast-green-column {
+        display: none;
+    }
+}
