@@ -2,7 +2,7 @@
     background-image: url(../../../shared/picking\ plastic.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
     max-height: 900px;
     background-position: center;
 }
@@ -35,7 +35,7 @@
     position: relative;
     background-color: rgba(0, 109, 119, 0.89);
     right: 50px;
-    bottom: 60px;
+    top: 50vh;
 }
 
 .crystal-heading {
@@ -52,8 +52,13 @@
     font-size: 1.4rem;
 }
 
-.crystal-column, .podcast-green-column {
+.crystal-column {
     display: inline-block;
+}
+
+.podcast-green-column {
+    display: inline-block;
+    height: 100vh;
 }
 
 .crystal-button {
@@ -61,6 +66,8 @@
     color: #006d77 !important;
     font-weight: 200 !important;
     font-size: 1.4rem !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 .podcast-green-heading {
@@ -72,6 +79,7 @@
     font-family: 'Overpass', sans-serif !important;
     color: #edf6f9 !important;
     font-weight: 200 !important;
+    font-size: 1rem !important;
 }
 
 .podcast-green-button {
@@ -88,9 +96,29 @@
     text-decoration: none !important;
 }
 
+.podcast-green-button-small {
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    border-radius: 0px !important;
+    border-width: 3px !important;
+    font-family: 'Overpass', sans-serif !important;
+    color: #FFDDD2 !important;
+    border-color: #FFDDD2 !important;
+    font-size: medium !important;
+    padding: 6px 7px 4px 7px !important;
+    text-decoration: none !important;
+}
+
 .podcast-green-button:hover {
     color: #A76E59 !important;
     border-color: #A76E59 !important;
+}
+
+.green-link-small {
+    font-size: inherit !important;
+    display: inline !important;
+    font-weight: inherit !important;
 }
 
 .podcast-green-link {
@@ -99,8 +127,60 @@
     font-weight: 200 !important;
 }
 
+.podcast-green-link-small {
+    font-family: 'Overpass', sans-serif !important;
+    color: #FFDDD2 !important;
+    font-weight: 200 !important;
+    font-size: 0.9rem;
+}
+
 .podcast-green-link:hover {
     color: #FFDDD2 !important;
+}
+
+.crystal-small-square {
+    background-color: rgba(237, 246, 249, 0.8);
+    width: 80%;
+    max-width: 450px;
+    margin-top: 85px;
+}
+
+.podcast-green-square-small {
+    background-color: rgba(0, 109, 119, 0.89);
+    width: 80%;
+    max-width: 450px;
+    position: relative;
+}
+
+.crystal-heading-small {
+    font-family: 'Overpass', sans-serif;
+    color: #006d77;
+    font-weight: 300;
+    font-size: 30px !important;
+}
+
+.crystal-button-small {
+    font-family: 'Overpass', sans-serif !important;
+    color: #006d77 !important;
+    font-weight: 200 !important;
+    font-size: 1rem !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.crystal-sub-text-small {
+    font-family: 'Overpass', sans-serif;
+    color: #A76E59;
+    font-weight: 300;
+    font-size: 1rem !important;
+}
+
+.crystal-column-small {
+    display: none;
+}
+
+.podcast-green-column-small {
+    display: none;
 }
 
 @media screen and (max-width: 873px) {
@@ -111,4 +191,13 @@
     .podcast-green-column {
         display: none;
     }
+
+    .crystal-column-small {
+        display: inline-block;
+    }
+
+    .podcast-green-column-small {
+        display: inline-block;
+    }
 }
+
