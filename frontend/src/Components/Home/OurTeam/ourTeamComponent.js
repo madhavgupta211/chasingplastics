@@ -1,16 +1,6 @@
 import React, { Component } from "react"
 import "./ourTeam.css"
-import {
-  Card,
-  Button,
-  CardImg,
-  CardTitle,
-  CardSubtitle,
-  CardBody,
-  Container,
-  Row,
-  Col,
-} from "reactstrap"
+import { CardImg, Container, Row, Col } from "reactstrap"
 
 const photo1 = require("../../../shared/trialman-1.jpg")
 const photo2 = require("../../../shared/trialwoman-1.jpeg")
@@ -23,43 +13,25 @@ class OurTeam extends Component {
           <Col>Meet Our Hosts</Col>
         </Row>
 
-        <Row>
+        <Row xs="2">
           <Col>
-            <Card>
-              <CardImg
-                top
-                width="100%"
-                src={photo1}
-                alt="Card image cap"
-                className="hostimg"
-              />
-              <CardBody className="hostcard">
-                <CardTitle className="hostname">Arnav</CardTitle>
-                <CardSubtitle className="hostdesc">
-                  BITS Pilani, Batch of 2015
-                </CardSubtitle>
-                <Button>Button</Button>
-              </CardBody>
-            </Card>
+            <div className="host-card">
+              <img src={photo1} alt="Card image cap" className="host-image" />
+            </div>
+            <div className="host-body">
+              <div className="host-name">Arnav</div>
+              <div className="host-description">Founder/Host</div>
+            </div>
           </Col>
 
           <Col>
-            <Card>
-              <CardImg
-                top
-                width="100%"
-                src={photo2}
-                alt="Card image cap"
-                className="hostimg"
-              />
-              <CardBody className="hostcard">
-                <CardTitle className="hostname">Sanjana</CardTitle>
-                <CardSubtitle className="hostdesc">
-                  BITS Pilani, Batch of 2016
-                </CardSubtitle>
-                <Button>Button</Button>
-              </CardBody>
-            </Card>
+            <div className="host-card">
+              <img src={photo2} alt="Card image cap" className="host-image" />
+            </div>
+            <div className="host-body">
+              <div className="host-name">Sanjana</div>
+              <div className="host-description">Founder/Host</div>
+            </div>
           </Col>
         </Row>
       </Container>

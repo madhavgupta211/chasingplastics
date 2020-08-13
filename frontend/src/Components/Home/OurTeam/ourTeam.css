@@ -1,29 +1,60 @@
 .heading {
-  font-family: "Overpass", sans-serif;
+  font-family: "Permanent Marker", sans-serif;
   color: #006d77;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 45px;
 }
 
-.hostname {
+.host-name {
+  font-family: "Overpass", sans-serif;
+  color: #e29578;
+  font-weight: 300;
+  font-size: 40px;
+  vertical-align: top;
+}
+
+.host-description {
   font-family: "Overpass", sans-serif;
   color: #006d77;
   font-weight: 300;
-  font-size: 24px;
+  font-size: 25px;
+  vertical-align: top;
 }
 
-.hostdesc {
-  font-family: "Overpass", sans-serif;
-  color: #006d77;
-  font-weight: 300;
-  font-size: 24px;
+.host-card {
+  /* background-color: #a76e59; */
+  position: relative;
+  top: 50px;
+  border: none;
 }
 
-.hostcard {
-  background-color: #a76e59;
+.host-image {
+  width: auto;
+  height: 250px;
+  /* border-radius: 50%; */
 }
 
-.hostimg {
-  width: 100%;
-  height: auto;
+.host-body {
+  position: relative;
+  top: 100px;
+}
+
+@media screen and (max-width: 873px) {
+  .host-image {
+    width: auto;
+    height: 150px;
+    /* border-radius: 50%; */
+  }
+
+  .host-name {
+    font-weight: 300;
+    font-size: 24px;
+    vertical-align: top;
+  }
+
+  .host-description {
+    font-weight: 300;
+    font-size: 16px;
+    vertical-align: top;
+  }
 }
