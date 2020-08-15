@@ -1,0 +1,90 @@
+.team-bg {
+  background-image: url(../../../shared/home\ component\ pattern.png);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.heading {
+  font-family: "Permanent Marker", sans-serif;
+  color: #006d77;
+  font-weight: 500;
+  font-size: 45px;
+}
+
+.latest-sm-card {
+  height: 240px !important;
+  border-width: 0px !important;
+  border-radius: 0px !important;
+  padding: 0px !important;
+}
+
+.latest-card {
+  height: 487px !important;
+  border-width: 0px !important;
+  border-radius: 0px !important;
+  padding: 0px !important;
+}
+
+.latest-heading-row {
+  margin-top: 6vh;
+  margin-bottom: 6vh;
+}
+
+.latest-card-img {
+  object-fit: cover;
+  height: 240px !important;
+}
+
+.latest-sm-card-img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.latest-black-bg {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.latest-card-black-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 3rem;
+  color: #ffffff !important;
+}
+
+.latest-card-light-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 3rem;
+  color: #e29578 !important;
+}
+
+.latest-card-light-text {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #83c5be !important;
+}
+
+.latest-card-black-text {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #ffffff !important;
+}
+
+.latest-card-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 3rem;
+  color: #4b4b4b !important;
+}
+
+.latest-card-text {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #6b6a6a !important;
+}
