@@ -14,7 +14,7 @@ class Title extends Component {
             </div>
             <div className = "col-12 col-md-6 offset-lg-1 col-lg-6 align-self-center">
               <h1 className = "text-center text-md-left pt-4 pt-md-0 title-header">Title you want</h1>
-              <h4 className = "text-center text-md-left title-text pt-2">Sed at urna a massa sodales euismod. Sed quis aliquam nisl.
+              <h4 className = "text-center text-md-left title-text pt-2 pb-5 pb-md-0">Sed at urna a massa sodales euismod. Sed quis aliquam nisl.
                Nullam hendrerit purus lacus, sed viverra dolor mollis sit amet. Quisque scelerisque ornare nisi, nec 
                porttitor arcu egestas sed. Nam cursus vitae metus dictum egestas. Fusce </h4>
             </div>
