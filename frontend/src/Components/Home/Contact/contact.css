@@ -1,0 +1,75 @@
+.contact-bg {
+    background-image: url(../../../shared/contact.png);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.contact-sub {
+    color: #BE6D4F !important;
+    font-weight: 400 !important;
+}
+
+.contact-margin {
+    margin-top: 60px !important;
+}
+
+.contact-card-margin {
+    margin-top: 60px !important;
+}
+
+@media screen and (max-width:992px) {
+    .contact-card-margin {
+        margin-top: 0px !important;
+    }
+}
+
+.contact-card {
+    border-radius: 0px !important;
+    border-width: 0px !important;
+}
+
+.contact-label {
+    font-family: 'Overpass', sans-serif !important;
+    color: #006d77 !important;
+}
+
+.contact-input {
+    border-radius: 0px !important;
+    background-color: #EDF6F9 !important;
+    border-width: 0px !important;
+}
+
+.contact-submit-button {
+    border-radius: 0px !important;
+    border-width: 0px !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: #e29578 !important;
+}
+
+.contact-submit-button:hover, .contact-submit-button:focus {
+    background-color: #006d77 !important;
+}
+
+.contact-info-card {
+    background-color: rgba(0, 109, 119, 0.65) !important;
+    width: 100% !important;
+    border-width: 0px !important;
+    border-radius: 0px !important;
+}
+
+.contact-info-text {
+    font-family: "Overpass", sans-serif !important;
+    color: white !important;
+    font-weight: 300 !important;
+}
+
+.contact-info-text-pink {
+    font-family: "Overpass", sans-serif !important;
+    color: #FFDDD2 !important;
+    font-weight: 300 !important;
+    line-height: 1.4rem !important;
+}

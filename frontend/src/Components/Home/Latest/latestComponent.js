@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 import "./latest.css";
-import { Card, CardImg, CardTitle, CardBody, CardText, CardImgOverlay } from "reactstrap";
+import { Button, Card, CardImg, CardTitle, CardBody, CardText, CardImgOverlay } from "reactstrap";
 
 const photo1 = require("../../../shared/trialman-1.jpg");
 const photo2 = require("../../../shared/trialwoman-1.jpeg");
 const speaker = require("../../../shared/speaker.jpg");
 const newsletter = require("../../../shared/Group-laughing.jpg");
 
-class OurTeam extends Component {
+class Latest extends Component {
   render() {
     return (
-      <div className = "team-bg">
+      <div className = "latest-bg">
         <div className = "container">
           <div className = "row title-row my-auto">
             <div className = "col-12 latest-heading-row">
@@ -70,6 +70,9 @@ class OurTeam extends Component {
                 </CardImgOverlay>
               </Card>
             </div>
+            <div className = "col-12">
+              <Button className = "latest-read-more">Read More</Button>
+            </div>
           </div>
         </div>
       </div>
@@ -77,4 +80,4 @@ class OurTeam extends Component {
   }
 }
 
-export default OurTeam;
+export default Latest;

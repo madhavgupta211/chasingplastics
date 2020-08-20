@@ -1,4 +1,4 @@
-.team-bg {
+.latest-bg {
   background-image: url(../../../shared/home\ component\ pattern.png);
   min-height: 100vh;
   display: flex;
@@ -87,4 +87,21 @@
 .latest-card-text {
   font-family: 'Source Sans Pro', sans-serif;
   color: #6b6a6a !important;
+}
+
+.latest-read-more {
+  margin: 20px 0px 30px 0px !important;
+  background-color: #ffddd2 !important;
+  border-radius: 0px !important;
+  border-width: 0px !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.latest-read-more:hover {
+  background-color: #e29578 !important;
+}
+
+.latest-read-more:focus {
+  background-color: #e29578 !important;
 }

@@ -3,6 +3,8 @@ import "./home.css";
 import Latest from './Latest/latestComponent';
 import Banner from './Banner/bannerComponent';
 import Title from './Title/titleComponent'; 
+import OurTeam from './OurTeam/ourTeamComponent';
+import Contact from './Contact/contactComponent';
 
 class Home extends Component {
   render() {
@@ -11,6 +13,8 @@ class Home extends Component {
         <Banner />
         <Title />
         <Latest />
+        <OurTeam />
+        <Contact />
       </div>
     );
   }
