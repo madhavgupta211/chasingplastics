@@ -3,6 +3,7 @@ import { Card, CardBody, Form, Row, Col, Label, Button, CardText} from 'reactstr
 import "./contact.css";
 import { Control, LocalForm } from 'react-redux-form';
 
+
 class Contact extends Component {
   
   handleSubmit = (values) => {
@@ -22,7 +23,7 @@ class Contact extends Component {
                   <CardBody>
                     <CardText className = "text-left my-3">
                       <h6 className = "contact-info-text">
-                        <span className = "fa fa-lg fa-envelope my-2 mr-2"></span>chasingplastics@xyz.org
+                        <span className = "fa fa-lg fa-envelope my-2 mr-2"></span>info.chasingplastic@gmail.com
                       </h6>
                       <h6 className = "contact-info-text">
                         <span className = "fa fa-lg fa-phone my-2 mr-2 pr-1"></span>12534-678-91
