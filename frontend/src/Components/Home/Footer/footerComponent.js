@@ -89,23 +89,23 @@ class Footer extends Component {
                   {/* Twitter aur facebook ke bhi icons banadena agar isme lagana ho toh. verna ye dono links hata denge */}
                   <li className="list-inline-item">
                     <a className="btn-floating btn-sm rgba-white-slight mx-1">
-                      <span className="fa fa-facebook"></span>
+                      <span className="fa fa-facebook fa-2x"></span>
                     </a>
                   </li>
 
                   <li className="list-inline-item">
                     <a className="btn-floating btn-sm rgba-white-slight mx-1">
-                      <i className="fa fa-twitter"></i>
+                      <i className="fa fa-twitter fa-2x"></i>
                     </a>
                   </li>
                   <li className="list-inline-item">
                     <a className="btn-floating btn-sm rgba-white-slight mx-1">
-                      <i className="fa fa-spotify"></i>
+                      <i className="fa fa-spotify fa-2x"></i>
                     </a>
                   </li>
                   <li className="list-inline-item">
                     <a className="btn-floating btn-sm rgba-white-slight mx-1">
-                      <i className="fa fa-instagram"></i>
+                      <i className="fa fa-instagram fa-2x"></i>
                     </a>
                   </li>
                 </ul>
