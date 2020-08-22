@@ -22,11 +22,29 @@
     }
 }
 
-.team-button-1:hover, .team-button-2:hover {
+.team-button-1:hover, .team-button-2:hover, .team-button-1:focus, .team-button-2:focus, .team-button-1:active, .team-button-2:active {
     width: 50vw;
-    min-width: 160px !important;
-    max-width: 500px !important;
+    min-width: 180px !important;
+    max-width: 410px !important;
     z-index: 3 !important;
+}
+
+.team-name {
+    font-family: 'Overpass', sans-serif;
+    color: #e29578;
+}
+
+.team-designation {
+    font-family: 'Overpass', sans-serif;
+    color: #006d77;
+}
+
+.team-content {
+    font-family: 'Overpass', sans-serif;
+    background-color: #e29578;
+    color: white !important;
+    font-weight: 300 !important;
+    line-height: 1.4rem;
 }
 
 .team-button-1 {
@@ -36,8 +54,8 @@
     border-width: 0px !important;
     padding: 0 !important;
     width: 31vw;
-    min-width: 105px !important;
-    max-width: 335px !important;
+    min-width: 120px !important;
+    max-width: 270px !important;
     margin-right: -6vw;
     z-index: 1;
     transition: width ease 0.5s, max-width ease 0.5s, min-width ease 0.5s;
@@ -50,8 +68,49 @@
     border-width: 0px !important;
     padding: 0 !important;
     width: 31vw;
-    min-width: 105px !important;
-    max-width: 335px !important;
+    min-width: 120px !important;
+    max-width: 270px !important;
     z-index: 2;
     transition: width ease 0.5s, max-width ease 0.5s, min-width ease 0.5s;
 }
+
+.team-content-1 {
+    background-color: transparent !important;
+    height: 0px;
+    opacity: 0;
+    margin-top: 0px;
+    transition: opacity ease 0.3s, height ease 0.3s;
+}
+
+.team-content-2 {
+    background-color: transparent !important;
+    height: 0px;
+    opacity: 0;
+    margin-top: 0px;
+    transition: opacity ease 0.3s, height ease 0.3s;
+}
+
+.team-button-1:hover ~ .team-content-1, .team-button-1:active ~ .team-content-1, .team-button-1:focus ~ .team-content-1 {
+    opacity: 1;
+    height: auto;
+}
+
+.team-button-1:hover ~ .team-content-2 {
+    opacity: 0 !important;
+    height: 0px !important;
+}
+
+.team-button-2:hover ~ .team-content-2, .team-button-2:active ~ .team-content-2, .team-button-2:focus ~ .team-content-2  {
+    opacity: 1;
+    height: auto;
+}
+
+.team-button-2:hover ~ .team-content-1 {
+    opacity: 0 !important;
+    height: 0px !important;
+}
+
+
+
+
+
