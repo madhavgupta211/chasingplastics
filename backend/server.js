@@ -8,6 +8,8 @@ let Blog = require("./blog.model")
 let Podcast = require("./podcast.model")
 const blogRoutes = express.Router()
 const podcastRoutes = express.Router()
+nodeMailer = require("nodemailer")
+
 app.use(cors())
 app.use(bodyParser.json())
 require("dotenv").config()
@@ -65,7 +67,84 @@ blogRoutes.route("/add").post(function (req, res) {
     })
 })
 
+podcastRoutes.route("/").get(function (req, res) {
+  Podcast.find(function (err, podcasts) {
+    if (err) {
+      console.log(err)
+    } else {
+      res.json(podcasts)
+    }
+  })
+})
+
+podcastRoutes.route("/:id").get(function (req, res) {
+  let id = req.params.id
+  Podcast.findById(id, function (err, podcast) {
+    res.json(podcast)
+  })
+})
+
+podcastRoutes.route("/update/:id").post(function (req, res) {
+  Podcast.findById(req.params.id, function (err, podcast) {
+    if (!podcast) res.status(404).send("data is not found")
+    else podcast.podcast_title = req.body.podcast_title
+    podcast.podcast_url = req.body.podcast_url
+    podcast.podcast_date = req.body.podcast_date
+    podcast
+      .save()
+      .then((podcast) => {
+        res.json("podcast updated!")
+      })
+      .catch((err) => {
+        res.status(400).send("Update not possible")
+      })
+  })
+})
+
+podcastRoutes.route("/add").post(function (req, res) {
+  let podcast = new Podcast(req.body)
+  podcast
+    .save()
+    .then((podcast) => {
+      res.status(200).json({ podcast: "podcast added successfully" })
+    })
+    .catch((err) => {
+      res.status(400).send("adding new podcast failed")
+    })
+})
+
+app.post("/contact-us", function (req, res) {
+  const id = process.env.ID
+  const pass = process.env.PASS
+  let transporter = nodeMailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
+    auth: {
+      // should be replaced with real sender's account
+      user: id,
+      pass: pass,
+    },
+  })
+  let mailOptions = {
+    // should be replaced with real recipient's account
+    to: "dwij.mehta@gmail.com",
+    subject: req.body.subject,
+    body: req.body.message,
+  }
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      return console.log(error)
+    }
+    console.log("Message %s sent: %s", info.messageId, info.response)
+  })
+  res.status(200).json({ email: "emailed successfully" })
+  res.end()
+})
+
 app.use("/blogs", blogRoutes)
+app.use("/podcasts", podcastRoutes)
+
 app.listen(PORT, function () {
   console.log("Server is running on Port: " + PORT)
 })
