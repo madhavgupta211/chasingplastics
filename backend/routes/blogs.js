@@ -30,33 +30,16 @@ blogRoutes.route("/:id").get(function (req, res) {
   })
 })
 
-blogRoutes.route("/update/:id").post(function (req, res) {
-  blog.findById(req.params.id, function (err, blog) {
-    if (!blog) res.status(404).send("data is not found")
-    else blog.blog_title = req.body.blog_title
-    blog.blog_url = req.body.blog_url
-    blog.blog_date = req.body.blog_date
-    blog
-      .save()
-      .then((blog) => {
-        res.json("blog updated!")
-      })
-      .catch((err) => {
-        res.status(400).send("Update not possible")
-      })
-  })
-})
-
-blogRoutes.route("/add").post(function (req, res) {
-  let blog = new Blog(req.body)
-  blog
-    .save()
-    .then((blog) => {
-      res.status(200).json({ blog: "Blog added successfully" })
-    })
-    .catch((err) => {
-      res.status(400).send("adding new blog failed")
-    })
-})
+// blogRoutes.route("/add").post(function (req, res) {
+//   let blog = new Blog(req.body)
+//   blog
+//     .save()
+//     .then((blog) => {
+//       res.status(200).json({ blog: "Blog added successfully" })
+//     })
+//     .catch((err) => {
+//       res.status(400).send("adding new blog failed")
+//     })
+// })
 
 module.exports = blogRoutes
