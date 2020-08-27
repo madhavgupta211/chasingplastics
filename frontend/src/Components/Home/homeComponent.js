@@ -6,16 +6,18 @@ import Title from "./Title/titleComponent"
 import OurTeam from "./OurTeam/ourTeamComponent"
 import Contact from "./Contact/contactComponent"
 import Footer from "./Footer/footerComponent"
+import Header from "../Header/headerComponent"
 
 class Home extends Component {
   render() {
     return (
       <div>
-        <Banner />
-        <Title />
-        <Latest />
-        <OurTeam />
-        <Contact />
+        <Header />
+        <Banner name = "banner" />
+        <Title name = "title"/>
+        <Latest name = "latest" />
+        <OurTeam name = "ourteam" />
+        <Contact name = "contact" />
         <Footer />
       </div>
     )

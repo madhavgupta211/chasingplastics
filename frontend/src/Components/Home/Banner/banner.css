@@ -8,6 +8,13 @@
     display: block !important;
 }
 
+@media screen and (min-height: 1049px) {
+    .banner-bg {
+        min-height: 0px;
+        height: 1050px;
+    }
+}
+
 .banner-row {
     height: 100% !important;
     width: 100vw !important;

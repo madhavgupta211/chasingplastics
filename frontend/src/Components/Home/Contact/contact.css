@@ -7,6 +7,13 @@
   overflow: hidden;
 }
 
+@media screen and (min-height: 1049px) {
+  .contact-bg {
+    min-height: 0px;
+    height: 1050px;
+  }
+}
+
 .contact-sub {
   color: #be6d4f !important;
   font-weight: 400 !important;

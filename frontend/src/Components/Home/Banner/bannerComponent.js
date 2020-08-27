@@ -5,7 +5,7 @@ import { Button } from 'reactstrap';
 class Banner extends Component {
   render() {
     return(
-      <div className = "banner-bg">
+      <div className = "banner-bg" name = {this.props.name}>
         <div className = "row banner-row my-auto mx-auto">
           <div className = "col-7 crystal-column">
             <div className = "crystal-square">

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Navbar, NavbarBrand, Nav, NavItem, Input, Button, Form, FormGroup, NavbarToggler, Collapse } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 import "./header.css";
+import { Link } from 'react-scroll';
 
 const insta = require("../../shared/insta logo.png");
 const spotify = require("../../shared/spotify logo.png");
@@ -27,7 +27,7 @@ class Header extends Component {
       <Navbar light expand = "lg fixed-top">
         <div className = "container">
           <NavbarBrand className = "mr-0">
-            <NavLink className = "navbar-logo" to = '/home'>CHASING PLASTICS</NavLink>
+            <Link className = "navbar-logo" to = '/home'>CHASING PLASTICS</Link>
           </NavbarBrand>
           <img src = {spotify} className = "d-block d-lg-none nav-redirects ml-auto"/>&nbsp;
           <img src = {insta} className = "d-block d-lg-none nav-redirects"/>&nbsp;
@@ -36,19 +36,44 @@ class Header extends Component {
           </NavbarToggler>
           <Nav navbar className = "ml-auto mr-auto d-none d-lg-block">
             <NavItem className = "mx-2 text-left text-lg-center my-2 my-md-0 d-inline">
-              <NavLink className = "navbar-link" to = "/home">Home</NavLink>
+              <Link className = "navbar-link" 
+              to = "title"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration= {500}>Home</Link>
             </NavItem>
             <NavItem className = "mx-2 text-left text-lg-center my-2 my-md-0 d-inline">
-              <NavLink className = "navbar-link" to = "/blog">Blog</NavLink>
+              <Link className = "navbar-link" 
+              to = "latest"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration= {500}>Blog</Link>
             </NavItem>
             <NavItem className = "mx-2 text-left text-lg-center my-2 my-md-0 d-inline">
-              <NavLink className = "navbar-link" to = "/podcast">Podcast</NavLink>
+              <Link className = "navbar-link" 
+              to = "banner"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration= {500}>Podcast</Link>
             </NavItem>
             <NavItem className = "mx-2 text-left text-lg-center my-2 my-md-0 d-inline">
-              <NavLink className = "navbar-link" to = "/home">The Hosts</NavLink>
+              <Link className = "navbar-link" 
+              to = "ourteam"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration= {500}>The Hosts</Link>
             </NavItem>
             <NavItem className = "mx-2 text-left text-lg-center my-2 my-md-0 d-inline">
-              <NavLink className = "navbar-link" to = "/home">Contact</NavLink>
+              <Link className = "navbar-link" 
+              to = "contact"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration= {500}>Contact</Link>
             </NavItem>
           </Nav>
           <img src = {spotify} className = "d-none d-lg-block nav-redirects"/>&nbsp;
@@ -70,27 +95,57 @@ class Header extends Component {
               </div>
                 <div className = "row row-pop-up align-items-center">
                     <div className = "col-12 text-center">
-                      <NavLink className = "pop-up-link" to = "/home" ><h1>Home</h1></NavLink>
+                      <Link className = "pop-up-link" 
+                      onClick = {this.toggleNav}
+                      to = "title"
+                      spy={true}
+                      smooth={true}
+                      offset={0}
+                      duration= {500}><h1>Home</h1></Link>
                     </div>
                 </div>
                 <div className = "row row-pop-up align-items-center">
                     <div className = "col-12 text-center">
-                      <NavLink className = "pop-up-link" to = "/blog" ><h1>Blog</h1></NavLink>
+                      <Link className = "pop-up-link" 
+                      onClick = {this.toggleNav}
+                      to = "latest"
+                      spy={true}
+                      smooth={true}
+                      offset={0}
+                      duration= {500}><h1>Blog</h1></Link>
                     </div>
                 </div>
                 <div className = "row row-pop-up  align-items-center">
                     <div className = "col-12 text-center">
-                      <NavLink className = "pop-up-link" to = "/podcast" ><h1>Podcast</h1></NavLink>
+                      <Link className = "pop-up-link" 
+                      onClick = {this.toggleNav}
+                      to = "banner"
+                      spy={true}
+                      smooth={true}
+                      offset={0}
+                      duration= {500}><h1>Podcast</h1></Link>
                     </div>
                 </div>
                 <div className = "row row-pop-up align-items-center">
                     <div className = "col-12 text-center">
-                      <NavLink className = "pop-up-link" to = "/home" ><h1>The Hosts</h1></NavLink>
+                      <Link className = "pop-up-link" 
+                      onClick = {this.toggleNav}
+                      to = "ourteam"
+                      spy={true}
+                      smooth={true}
+                      offset={0}
+                      duration= {500}><h1>The Hosts</h1></Link>
                     </div>
                 </div>
                 <div className = "row row-pop-up align-items-center">
                     <div className = "col-12 text-center">
-                      <NavLink className = "pop-up-link" to = "/home" ><h1>Contact</h1></NavLink>
+                      <Link className = "pop-up-link" 
+                      onClick = {this.toggleNav}
+                      to = "contact"
+                      spy={true}
+                      smooth={true}
+                      offset={0}
+                      duration= {500}><h1>Contact</h1></Link>
                     </div>
                 </div>
             </div>

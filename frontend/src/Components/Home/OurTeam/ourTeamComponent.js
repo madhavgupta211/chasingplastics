@@ -8,7 +8,7 @@ const sanjana = require("../../../shared/sanjana.png");
 class OurTeam extends Component {
   render() { 
     return(
-      <div className = "ourteam-bg">
+      <div className = "ourteam-bg"  name = {this.props.name}>
           <div className = "row title-row my-auto">
             <div className = "col-12 latest-heading-row team-header">  
               <h1 className = "title-header">The Hosts</h1>

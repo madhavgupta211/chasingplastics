@@ -13,7 +13,7 @@ class Contact extends Component {
   
   render() {
     return(
-      <div className = "contact-bg">
+      <div className = "contact-bg"  name = {this.props.name}>
         <div className = "container">
           <div className = "row title-row my-auto">
             <div className = "col-12 col-lg-5 latest-heading-row justify-content-end contact-margin d-block d-lg-flex">

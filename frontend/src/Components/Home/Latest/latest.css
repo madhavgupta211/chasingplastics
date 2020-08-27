@@ -7,6 +7,13 @@
   overflow: hidden;
 }
 
+@media screen and (min-height: 1049px) {
+  .latest-bg {
+    min-height: 0px;
+    height: 1050px;
+  }
+}
+
 .heading {
   font-family: "Permanent Marker", sans-serif;
   color: #006d77;
@@ -91,17 +98,25 @@
 
 .latest-read-more {
   margin: 20px 0px 30px 0px !important;
-  background-color: #ffddd2 !important;
+  background-color: #e29578 !important;
   border-radius: 0px !important;
   border-width: 0px !important;
   outline: none !important;
   box-shadow: none !important;
+  text-decoration: none !important;
+  padding: 10px 15px 12px 15px !important;
+  color: white !important;
+}
+
+.latest-read-more-link {
+  color: white !important;
+  text-decoration: none !important;
 }
 
 .latest-read-more:hover {
-  background-color: #e29578 !important;
+  background-color: #006d77 !important;
 }
 
 .latest-read-more:focus {
-  background-color: #e29578 !important;
+  background-color: #006d77 !important;
 }

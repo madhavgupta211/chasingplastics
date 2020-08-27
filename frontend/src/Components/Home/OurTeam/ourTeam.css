@@ -6,6 +6,13 @@
     overflow: hidden; 
 }
 
+@media screen and (min-height: 1049px) {
+    .ourteam-bg {
+      min-height: 0px;
+      height: 1050px;
+    }
+  }
+
 .team-header {
     margin-bottom: 1vh !important;
 }

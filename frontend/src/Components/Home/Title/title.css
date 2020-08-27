@@ -5,6 +5,13 @@
     justify-content: center;
 }
 
+@media screen and (min-height: 1049px) {
+    .title-bg {
+        min-height: 0px;
+        height: 1050px;
+    }
+}
+
 .title-row {
     height: 100% !important;
 }
@@ -24,9 +31,10 @@
 
 .title-text {
     font-family: 'Overpass', sans-serif !important;
-    font-size: 2vw !important;
+    font-size: 1.5vw !important;
     font-weight: 300;
-    line-height: 3vw !important;
+    line-height: 2vw !important;
+    color: #b3735c;
 }
 
 @media screen and (max-width: 768px) {
@@ -35,8 +43,8 @@
     }
 
     .title-text {
-        font-size: 4vw !important;
-        line-height: 6vw !important;
+        font-size: 3.5vw !important;
+        line-height: 4.5vw !important;
     }
 
     .tiled-image {
@@ -45,3 +53,4 @@
     }
 
 }
+

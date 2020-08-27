@@ -10,7 +10,7 @@ const newsletter = require("../../../shared/Group-laughing.jpg");
 class Latest extends Component {
   render() {
     return (
-      <div className = "latest-bg">
+      <div className = "latest-bg "  name = {this.props.name}>
         <div className = "container">
           <div className = "row title-row my-auto">
             <div className = "col-12 latest-heading-row">
@@ -71,7 +71,7 @@ class Latest extends Component {
               </Card>
             </div>
             <div className = "col-12">
-              <Button className = "latest-read-more">Read More</Button>
+              <Button className = "latest-read-more"><a className = "latest-read-more-link" href = "https://medium.com/chasing-plastics">Read More</a></Button>
             </div>
           </div>
         </div>

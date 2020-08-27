@@ -10,11 +10,8 @@ class Main extends Component {
   render() {
     return(
       <div>
-        <Header />
         <Switch>
           <Route path = "/home" component = {Home} />
-          <Route path = "/podcast" component = {Podcast} />
-          <Route path = "/blog" component = {Blog} />
           <Redirect to = "/home" /> 
         </Switch>
       </div>
