@@ -27,6 +27,7 @@
     text-decoration: none !important;
     font-family: 'Overpass', sans-serif;
     color: #ffddd2 !important;
+    cursor: pointer !important;
 }
 
 .navbar-link:hover {
@@ -81,6 +82,7 @@
     text-decoration: none !important;
     color: #006d77 !important;
     font-family: 'Permanent Marker', cursive;
+    cursor: pointer !important;
 }
 
 .slide-enter {

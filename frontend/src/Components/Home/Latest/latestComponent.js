@@ -71,7 +71,7 @@ class Latest extends Component {
               </Card>
             </div>
             <div className = "col-12">
-              <Button className = "latest-read-more"><a className = "latest-read-more-link" href = "https://medium.com/chasing-plastics">Read More</a></Button>
+              <Button className = "latest-read-more"><a target="_blank"  className = "latest-read-more-link" href = "https://medium.com/chasing-plastics">Read More</a></Button>
             </div>
           </div>
         </div>

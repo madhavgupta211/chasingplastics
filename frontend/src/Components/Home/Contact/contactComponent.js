@@ -2,13 +2,44 @@ import React, { Component } from 'react';
 import { Card, CardBody, Form, Row, Col, Label, Button, CardText} from 'reactstrap';
 import "./contact.css";
 import { Control, LocalForm } from 'react-redux-form';
+import baseUrl from '../../../baseUrl';
 
 
 class Contact extends Component {
   
+  constructor(props) {
+    super(props);
+    this.state = {
+      firstName: "",
+      lastName: "",
+      email: "",
+      message: ""
+    };
+  }
+  
   handleSubmit = (values) => {
     console.log(values);
-    window.location.reload(false);
+    fetch(baseUrl + '/contact-us', {
+      method: "POST",
+      body: JSON.stringify(values),
+      header: {
+        "Content-Type": "application/json"
+      },
+      credentials: "same-origin"
+    })
+    .then(response => {
+      if(response.ok) {
+        return response;
+      } else {
+        var error = new Error('Error ' + response.status + ': ' + response.statusText);
+        error.response = response;
+        throw error;
+      }
+    }, 
+    error => {
+        throw error;
+    })
+    .catch(error => { console.log('post Contacts', error.message); });
   }
   
   render() {
