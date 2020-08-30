@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import './ourTeam.css';
-import { Button } from 'reactstrap';
 
 const arnav = require("../../../shared/arnav.png");
 const sanjana = require("../../../shared/sanjana.png");

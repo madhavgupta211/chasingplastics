@@ -7,6 +7,7 @@ import OurTeam from "./OurTeam/ourTeamComponent"
 import Contact from "./Contact/contactComponent"
 import Footer from "./Footer/footerComponent"
 import Header from "../Header/headerComponent"
+import Player from "./Player/playerComponent";
 
 class Home extends Component {
   render() {
@@ -18,6 +19,7 @@ class Home extends Component {
         <Latest name = "latest" />
         <OurTeam name = "ourteam" />
         <Contact name = "contact" />
+        <Player name = "player" />
         <Footer />
       </div>
     )
