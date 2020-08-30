@@ -55,19 +55,19 @@ class Footer extends Component {
               <h6 className="text-uppercase mb-4 font-weight-bold">
                 Contact Info
               </h6>
-              <p>
+              {/* <p>
                 <i className="fa fa-home mr-3"></i> New York, NY 10012, US
-              </p>
-              <p>
+              </p> */}
+              <p className = "my-5">
                 <span className="fa fa-lg fa-envelope my-2 mr-2"></span>
                 info.chasingplastic@gmail.com
               </p>
-              <p>
+              {/* <p>
                 <i className="fa fa-phone mr-3"></i> + 01 234 567 88
               </p>
               <p>
                 <i className="fa fa-print mr-3"></i> + 01 234 567 89
-              </p>
+              </p> */}
             </div>
           </div>
 
@@ -93,11 +93,11 @@ class Footer extends Component {
                     </a>
                   </li>
 
-                  <li className="list-inline-item">
+                  {/* <li className="list-inline-item">
                     <a className="btn-floating btn-sm rgba-white-slight mx-1">
                       <i className="fa fa-twitter fa-2x"></i>
                     </a>
-                  </li>
+                  </li> */}
                   <li className="list-inline-item">
                     <a className="btn-floating btn-sm rgba-white-slight mx-1">
                       <i className="fa fa-spotify fa-2x"></i>

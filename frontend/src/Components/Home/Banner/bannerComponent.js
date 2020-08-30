@@ -9,9 +9,9 @@ class Banner extends Component {
         <div className = "row banner-row my-auto mx-auto">
           <div className = "col-7 crystal-column">
             <div className = "crystal-square">
-              <div className = "green-square">
-              </div>
-              <div className = "py-4 pl-4 pr-5">
+              {/* <div className = "green-square">
+              </div> */}
+              {/* <div className = "py-4 pl-4 pr-5">
                 <h1 className = "text-left crystal-heading">An evironment conservation podcast</h1>
               </div>
               <div className = "pb-4 pl-4 pr-3">
@@ -21,7 +21,7 @@ class Banner extends Component {
               </div>
               <div className = "text-left pl-4">
                 <Button color = "link" className = "p-0 crystal-button">Read More</Button>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className = "col-5 mt-auto align-self-end podcast-green-column">
@@ -48,7 +48,7 @@ class Banner extends Component {
           </div>
           <div className = "col-12 crystal-column-small">
             <div className = "crystal-small-square mx-auto" >
-              <div className = "pt-3 pb-2 pl-4 pr-5">
+              {/* <div className = "pt-3 pb-2 pl-4 pr-5">
                 <h4 className = "text-left crystal-heading-small">An evironment conservation podcast</h4>
               </div>
               <div className = "pb-2 pl-4 pr-3">
@@ -58,7 +58,7 @@ class Banner extends Component {
               </div>
               <div className = "text-left pl-4 pb-2">
                 <Button color = "link" className = "p-0 crystal-button-small">Read More</Button>
-              </div>
+              </div> */}
             </div>
             <div className = "mt-4 mb-4 podcast-green-square-small text-left mx-auto">
               <div className = "px-4 pt-2 pb-2">

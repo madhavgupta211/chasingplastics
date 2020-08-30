@@ -16,10 +16,9 @@ class Home extends Component {
         <Header />
         <Banner name = "banner" />
         <Title name = "title"/>
-        <Latest name = "latest" />
+        <Player name = "player" />
         <OurTeam name = "ourteam" />
         <Contact name = "contact" />
-        <Player name = "player" />
         <Footer />
       </div>
     )

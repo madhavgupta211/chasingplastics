@@ -3,7 +3,7 @@ import { Card, CardBody, Row, Col, Label, Button, CardText} from 'reactstrap';
 import "./contact.css";
 import { Control, LocalForm } from 'react-redux-form';
 import baseUrl from '../../../baseUrl';
-
+var Recaptcha = require('react-recaptcha');
 
 class Contact extends Component {
   
@@ -13,33 +13,53 @@ class Contact extends Component {
       firstName: "",
       lastName: "",
       email: "",
-      message: ""
+      message: "",
+      isVerified: false
     };
   }
   
   handleSubmit = (values) => {
-    console.log(values);
-    fetch(baseUrl + '/contact-us', {
-      method: "POST",
-      body: JSON.stringify(values),
-      header: {
-        "Content-Type": "application/json"
-      },
-      credentials: "same-origin"
-    })
-    .then(response => {
-      if(response.ok) {
-        return response;
-      } else {
-        var error = new Error('Error ' + response.status + ': ' + response.statusText);
-        error.response = response;
-        throw error;
-      }
-    }, 
-    error => {
-        throw error;
-    })
-    .catch(error => { console.log('post Contacts', error.message); });
+    if(this.state.isVerified) {
+      console.log(values);
+      fetch(baseUrl + '/contact-us', {
+        method: "POST",
+        body: JSON.stringify(values),
+        header: {
+          "Content-Type": "application/json"
+        },
+        credentials: "same-origin"
+      })
+      .then(response => {
+        if(response.ok) {
+          alert("Thank you for your message. We are excited for you to join our network of chasers");
+          return response;
+        } else {
+          var error = new Error('Error ' + response.status + ': ' + response.statusText);
+          error.response = response;
+          throw error;
+        }
+      }, 
+      error => {
+          throw error;
+      })
+      .catch(error => { console.log('post Contacts', error.message); });
+      window.location.reload(false);
+    }
+    else {
+      alert("Please verify that you are a human :)");
+    }
+  }
+
+  verifyCallback = (response) => {
+    if(response) {
+      this.setState({
+        isVerified: true
+      });
+    }
+  }
+
+  captchaLoaded = () => {
+    console.log("Captcha loaded");
   }
   
   render() {
@@ -56,9 +76,9 @@ class Contact extends Component {
                       <h6 className = "contact-info-text">
                         <span className = "fa fa-lg fa-envelope my-2 mr-2"></span>info.chasingplastic@gmail.com
                       </h6>
-                      <h6 className = "contact-info-text">
+                      {/* <h6 className = "contact-info-text">
                         <span className = "fa fa-lg fa-phone my-2 mr-2 pr-1"></span>12534-678-91
-                      </h6>
+                      </h6> */}
                       <h6 className = "contact-info-text-pink mt-4">
                         Send us a message. We will try to get back to you as soon as possible
                       </h6>
@@ -113,10 +133,20 @@ class Contact extends Component {
                       <Col>
                         <Control.textarea model=".message" 
                          className = "contact-input form-control text-center text-lg-left" 
-                         rows = "6" 
+                         rows = "5" 
                          name = "emailid" 
                          id = "emailid" 
                          placeholder = "Ask anything. Go on now.." />
+                      </Col>
+                    </Row>
+                    <Row className ="form-group">
+                      <Col>
+                      <Recaptcha
+                        sitekey="6LdJasUZAAAAALCU0QdYTQ7Xd_l3TXyhaj_IJ3ey"
+                        render="explicit"
+                        onloadCallback={this.captchaLoaded}
+                        verifyCallback={this.verifyCallback}
+                      />
                       </Col>
                     </Row>
                     <Row className="form-group">

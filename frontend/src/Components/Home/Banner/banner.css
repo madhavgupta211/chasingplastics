@@ -23,19 +23,20 @@
 .crystal-square {
     height: 450px;
     width: 450px;
-    background-color: rgba(237, 246, 249, 0.8);
+    background-image: url(../../../shared/cover\ art.jpg);
+    background-size: contain ;
     position: relative;
     left: 50px;
     top: 110px;
 }
 
 .green-square {
-    height: 140px;
-    width: 140px;
+    height: 100px;
+    width: 100px;
     position: absolute;
     background-color: rgba(0, 109, 119, 0.89);
-    left: 400px;
-    top: 30px;
+    left: 440px;
+    top: 130px;
 }
 
 .podcast-green-square {
@@ -148,8 +149,10 @@
 }
 
 .crystal-small-square {
-    background-color: rgba(237, 246, 249, 0.8);
+    background-image: url(../../../shared/cover\ art.jpg);
+    background-size: contain;
     width: 80%;
+    padding-top: 80%;
     max-width: 450px;
     margin-top: 85px;
 }
