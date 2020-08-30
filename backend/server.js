@@ -13,7 +13,6 @@ require("dotenv").config()
 app.post("/contact-us", function (req, res) {
   const id = process.env.ID
   const pass = process.env.PASS
-  console.log(req.body)
   let transporter = nodeMailer.createTransport({
     host: "smtp.gmail.com",
     port: 465,
@@ -28,8 +27,8 @@ app.post("/contact-us", function (req, res) {
     // should be replaced with real recipient's account
     to: "dwij.mehta@gmail.com",
     from: req.body.email,
-    subject: req.body.firstName + " " + req.body.lastName,
-    body: req.body.message,
+    subject: req.body.firstname + " " + req.body.lastname,
+    text: req.body.message,
   }
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
