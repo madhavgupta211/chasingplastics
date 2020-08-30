@@ -2,17 +2,18 @@ const express = require("express")
 const app = express()
 const bodyParser = require("body-parser")
 const cors = require("cors")
-const mongoose = require("mongoose")
 const PORT = 4000
 nodeMailer = require("nodemailer")
 
 app.use(cors())
+app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 require("dotenv").config()
 
 app.post("/contact-us", function (req, res) {
   const id = process.env.ID
   const pass = process.env.PASS
+  console.log(req.body)
   let transporter = nodeMailer.createTransport({
     host: "smtp.gmail.com",
     port: 465,
@@ -26,7 +27,8 @@ app.post("/contact-us", function (req, res) {
   let mailOptions = {
     // should be replaced with real recipient's account
     to: "dwij.mehta@gmail.com",
-    subject: req.body.subject,
+    from: req.body.email,
+    subject: req.body.firstName + " " + req.body.lastName,
     body: req.body.message,
   }
   transporter.sendMail(mailOptions, (error, info) => {
@@ -36,7 +38,7 @@ app.post("/contact-us", function (req, res) {
     console.log("Message %s sent: %s", info.messageId, info.response)
   })
   res.status(200).json({ email: "emailed successfully" })
-  res.end()
+  // res.end()
 })
 
 const blogRoutes = require("./routes/blogs")
