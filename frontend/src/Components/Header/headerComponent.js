@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Navbar, NavbarBrand, Nav, NavItem, Input, Button, Form, FormGroup, NavbarToggler, Collapse } from 'reactstrap';
+import { Navbar, NavbarBrand, Nav, NavItem, Button, NavbarToggler } from 'reactstrap';
 import { CSSTransition } from 'react-transition-group';
 import "./header.css";
 import { Link } from 'react-scroll';

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardBody, Form, Row, Col, Label, Button, CardText} from 'reactstrap';
+import { Card, CardBody, Row, Col, Label, Button, CardText} from 'reactstrap';
 import "./contact.css";
 import { Control, LocalForm } from 'react-redux-form';
 import baseUrl from '../../../baseUrl';
