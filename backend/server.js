@@ -25,10 +25,10 @@ app.post("/contact-us", function (req, res) {
   })
   let mailOptions = {
     // should be replaced with real recipient's account
-    to: "dwij.mehta@gmail.com",
+    to: "info.chasingplastic@gmail.com",
     from: req.body.email,
     subject: req.body.firstname + " " + req.body.lastname,
-    text: req.body.message,
+    text: req.body.message + "from " + req.body.email,
   }
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
