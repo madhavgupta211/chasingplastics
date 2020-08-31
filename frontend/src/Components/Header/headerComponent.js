@@ -37,7 +37,7 @@ class Header extends Component {
           <Nav navbar className = "ml-auto mr-auto d-none d-lg-block">
             <NavItem className = "mx-2 text-left text-lg-center my-2 my-md-0 d-inline">
               <Link className = "navbar-link" 
-              to = "title"
+              to = "banner"
               spy={true}
               smooth={true}
               offset={0}
@@ -45,15 +45,15 @@ class Header extends Component {
             </NavItem>
             <NavItem className = "mx-2 text-left text-lg-center my-2 my-md-0 d-inline">
               <Link className = "navbar-link" 
-              to = "latest"
+              to = "title"
               spy={true}
               smooth={true}
               offset={0}
-              duration= {500}>Blog</Link>
+              duration= {500}>About</Link>
             </NavItem>
             <NavItem className = "mx-2 text-left text-lg-center my-2 my-md-0 d-inline">
               <Link className = "navbar-link" 
-              to = "banner"
+              to = "player"
               spy={true}
               smooth={true}
               offset={0}
@@ -97,7 +97,7 @@ class Header extends Component {
                     <div className = "col-12 text-center">
                       <Link className = "pop-up-link" 
                       onClick = {this.toggleNav}
-                      to = "title"
+                      to = "banner"
                       spy={true}
                       smooth={true}
                       offset={0}
@@ -108,18 +108,18 @@ class Header extends Component {
                     <div className = "col-12 text-center">
                       <Link className = "pop-up-link" 
                       onClick = {this.toggleNav}
-                      to = "latest"
+                      to = "title"
                       spy={true}
                       smooth={true}
                       offset={0}
-                      duration= {500}><h1>Blog</h1></Link>
+                      duration= {500}><h1>About</h1></Link>
                     </div>
                 </div>
                 <div className = "row row-pop-up  align-items-center">
                     <div className = "col-12 text-center">
                       <Link className = "pop-up-link" 
                       onClick = {this.toggleNav}
-                      to = "banner"
+                      to = "player"
                       spy={true}
                       smooth={true}
                       offset={0}

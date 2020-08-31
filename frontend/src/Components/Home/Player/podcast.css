@@ -1,0 +1,20 @@
+.podcast-bg {
+    background-image: url(../../../shared/home\ component\ pattern.png);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+  
+@media screen and (min-height: 1049px) {
+    .podcast-bg {
+        min-height: 0px;
+        height: 1050px;
+    }
+}
+
+.player {
+    border-radius: 0px !important;
+}
+

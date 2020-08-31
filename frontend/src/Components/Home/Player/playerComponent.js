@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './podcast.css';
 
 class Player extends Component {
   
@@ -13,9 +14,16 @@ class Player extends Component {
   
   render() {
     return(
-      <div className = "container">
-        <div className = "row justify-content-center">
-          <div className = "col-12" id='buzzsprout-large-player-1316284'></div>
+      <div className = "podcast-bg" name = {this.props.name}>
+        <div className = "container"  >
+          <div className = "row justify-content-center">
+            <div className = "col-12 mb-5">
+              <h1 className = "title-header">
+                The Podcast
+              </h1>
+            </div>
+            <div className = "col-12 mt-3 mb-5 player" id='buzzsprout-large-player-1316284'></div>
+          </div>
         </div>
       </div>
     );
