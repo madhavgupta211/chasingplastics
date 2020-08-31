@@ -8,6 +8,13 @@
 
 .nav-redirects {
     height: 45px;
+    display: block;
+}
+
+.nav-redirect-link {
+    height: 45px !important;
+    text-decoration: none !important;
+    display: block;
 }
 
 @media screen and (max-width: 500px) {
@@ -16,6 +23,9 @@
     }
     .nav-redirects {
         height: 35px;
+    }
+    .nav-redirect-link{
+        height: 35px !important;
     }
 }
 

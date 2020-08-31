@@ -30,7 +30,9 @@ class Header extends Component {
             <Link className = "navbar-logo" to = '/home'>CHASING PLASTICS</Link>
           </NavbarBrand>
           <img src = {spotify} className = "d-block d-lg-none nav-redirects ml-auto"/>&nbsp;
-          <img src = {insta} className = "d-block d-lg-none nav-redirects"/>&nbsp;
+          <a href = "https://www.instagram.com/chasingplastics/" target = "_blank" className="mb-0 pb-0 nav-redirect-link">
+            <img src = {insta} className = "d-block d-lg-none nav-redirects"/>&nbsp;
+          </a>
           <NavbarToggler onClick = {this.toggleNav} className = " btn btn-primary n-toggler">
             <span className = "fa fa-lg fa-bars pb-1"></span>
           </NavbarToggler>
@@ -76,8 +78,10 @@ class Header extends Component {
               duration= {500}>Contact</Link>
             </NavItem>
           </Nav>
-          <img src = {spotify} className = "d-none d-lg-block nav-redirects"/>&nbsp;
-          <img src = {insta} className = "d-none d-lg-block nav-redirects"/>
+          <a href = "https://www.instagram.com/chasingplastics/" target = "_blank" className="mb-0 pb-0 nav-redirect-link">
+            <img src = {insta} className = "d-none d-lg-block nav-redirects"/>&nbsp;
+          </a>
+          <img src = {spotify} className = "d-none d-lg-block nav-redirects"/>
           <CSSTransition
             in = {this.state.isNavOpen}
             timeout = {500}

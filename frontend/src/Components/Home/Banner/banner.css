@@ -149,10 +149,8 @@
 }
 
 .crystal-small-square {
-    background-image: url(../../../shared/cover\ art.jpg);
-    background-size: contain;
+    background-repeat: no-repeat;
     width: 80%;
-    padding-top: 80%;
     max-width: 450px;
     margin-top: 85px;
 }
