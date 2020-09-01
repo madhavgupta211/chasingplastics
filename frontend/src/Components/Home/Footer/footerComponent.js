@@ -25,10 +25,10 @@ class Footer extends Component {
             <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
               <h6 className="text-uppercase mb-4 font-weight-bold">Content</h6>
               <p>
-                <a href="#!">Blogs</a>
+                <a href="https://medium.com/chasing-plastics" className = "footer-link" target = "_blank">Blogs</a>
               </p>
               <p>
-                <a href="#!">Podcasts</a>
+                <a href="#" className = "footer-link">Podcasts</a>
               </p>
             </div>
 
@@ -39,13 +39,13 @@ class Footer extends Component {
                 Useful links
               </h6>
               <p>
-                <a href="#!">Instagram</a>
+                <a className = "footer-link" href="https://www.instagram.com/chasingplastics/" target = "_blank">Instagram</a>
               </p>
               <p>
-                <a href="#!">Spotify</a>
+                <a className = "footer-link" href="#!">Spotify</a>
               </p>
               <p>
-                <a href="#!">Medium</a>
+                <a className = "footer-link" href="https://medium.com/chasing-plastics" target = "_blank">Medium</a>
               </p>
             </div>
 
@@ -77,7 +77,7 @@ class Footer extends Component {
             <div className="col-md-7 col-lg-8">
               <p className="text-center text-md-left">
                 © 2020 Copyright:
-                <a href="#">
+                <a className = "footer-link" href="#">
                   <strong> chasingplastic.com</strong>
                 </a>
               </p>
@@ -88,7 +88,7 @@ class Footer extends Component {
                 <ul className="list-unstyled list-inline">
                   {/* Twitter aur facebook ke bhi icons banadena agar isme lagana ho toh. verna ye dono links hata denge */}
                   <li className="list-inline-item">
-                    <a className="btn-floating btn-sm rgba-white-slight mx-1">
+                    <a className="btn-floating btn-sm rgba-white-slight mx-1 footer-link">
                       <span className="fa fa-facebook fa-2x"></span>
                     </a>
                   </li>
@@ -99,12 +99,12 @@ class Footer extends Component {
                     </a>
                   </li> */}
                   <li className="list-inline-item">
-                    <a className="btn-floating btn-sm rgba-white-slight mx-1">
+                    <a className="btn-floating btn-sm rgba-white-slight mx-1 footer-link">
                       <i className="fa fa-spotify fa-2x"></i>
                     </a>
                   </li>
                   <li className="list-inline-item">
-                    <a className="btn-floating btn-sm rgba-white-slight mx-1">
+                    <a className="btn-floating btn-sm rgba-white-slight mx-1 footer-link" target = "_blank" href = "https://www.instagram.com/chasingplastics/">
                       <i className="fa fa-instagram fa-2x"></i>
                     </a>
                   </li>

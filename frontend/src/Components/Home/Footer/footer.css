@@ -4,6 +4,15 @@ footer {
   min-width: 100%;
   max-width: 100%;
   height: auto;
-  background-color: rgba(237, 246, 249, 0.8);
+  background-color: #edf6f9;
   font-family: "Overpass", sans-serif;
+}
+
+.footer-link {
+  text-decoration: none !important;
+  color: #e29578 !important;
+}
+
+.footer-link:hover, .footer-link:active {
+  color: #006d77 !important;
 }

@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import "./banner.css";
 import { Button } from 'reactstrap';
+import { Link } from 'react-scroll';
+
+const cover = require("../../../shared/cover art.jpg");
 
 class Banner extends Component {
   render() {
@@ -33,7 +36,13 @@ class Banner extends Component {
                 <h6 className = "text-left podcast-green-sub-text">Listen to the latest episode and subscribe to all.</h6>
               </div>
               <div className = "text-left px-4 pb-4">
-                <Button color = "link" className = "btn podcast-green-button">Listen now</Button>
+                <Link to = "player"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration= {500}>
+                  <Button color = "link" className = "btn podcast-green-button">Listen now</Button>
+                </Link>
               </div>
               <div className = "px-4 pt-1">
                 <h6 className = "text-left podcast-green-sub-text">Subscribe to our podcast via:</h6>
@@ -48,6 +57,7 @@ class Banner extends Component {
           </div>
           <div className = "col-12 crystal-column-small">
             <div className = "crystal-small-square mx-auto" >
+              <img src = {cover} alt = "cover art" width = "100%"></img>
               {/* <div className = "pt-3 pb-2 pl-4 pr-5">
                 <h4 className = "text-left crystal-heading-small">An evironment conservation podcast</h4>
               </div>
@@ -68,7 +78,13 @@ class Banner extends Component {
                 <h4 className = "text-left podcast-green-sub-text">Listen to the latest episode and subscribe to all.</h4>
               </div>
               <div className = "text-left px-4 pb-3">
-                <Button color = "link" className = "btn podcast-green-button-small">Listen now</Button>
+                <Link to = "player"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration= {500}>
+                  <Button color = "link" className = "btn podcast-green-button-small">Listen now</Button>
+                </Link>
               </div>
               <div className = "px-4 pt-1">
                 <h4 className = "text-left podcast-green-sub-text">Subscribe to our podcast via:</h4>
