@@ -28,7 +28,7 @@ class Footer extends Component {
                 <a href="https://medium.com/chasing-plastics" className = "footer-link" target = "_blank">Blogs</a>
               </p>
               <p>
-                <a href="#" className = "footer-link">Podcasts</a>
+                <a href="https://open.spotify.com/show/0QOQzgkDBJqgGbGtNkqsbr" target="_blank" className = "footer-link">Podcasts</a>
               </p>
             </div>
 
@@ -42,7 +42,7 @@ class Footer extends Component {
                 <a className = "footer-link" href="https://www.instagram.com/chasingplastics/" target = "_blank">Instagram</a>
               </p>
               <p>
-                <a className = "footer-link" href="#!">Spotify</a>
+                <a className = "footer-link" href="https://open.spotify.com/show/0QOQzgkDBJqgGbGtNkqsbr" target="_blank">Spotify</a>
               </p>
               <p>
                 <a className = "footer-link" href="https://medium.com/chasing-plastics" target = "_blank">Medium</a>
@@ -99,7 +99,7 @@ class Footer extends Component {
                     </a>
                   </li> */}
                   <li className="list-inline-item">
-                    <a className="btn-floating btn-sm rgba-white-slight mx-1 footer-link">
+                    <a className="btn-floating btn-sm rgba-white-slight mx-1 footer-link" target="_blank" href = "https://open.spotify.com/show/0QOQzgkDBJqgGbGtNkqsbr">
                       <i className="fa fa-spotify fa-2x"></i>
                     </a>
                   </li>

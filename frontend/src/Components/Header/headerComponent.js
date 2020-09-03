@@ -29,7 +29,9 @@ class Header extends Component {
           <NavbarBrand className = "mr-0">
             <Link className = "navbar-logo" to = '/home'>CHASING PLASTICS</Link>
           </NavbarBrand>
-          <img src = {spotify} className = "d-block d-lg-none nav-redirects ml-auto"/>&nbsp;
+          <a href = "https://www.instagram.com/chasingplastics/" target = "_blank" className="ml-auto mb-0 pb-0 nav-redirect-link">
+            <img src = {spotify} className = "d-block d-lg-none nav-redirects"/>
+          </a>&nbsp;
           <a href = "https://www.instagram.com/chasingplastics/" target = "_blank" className="mb-0 pb-0 nav-redirect-link">
             <img src = {insta} className = "d-block d-lg-none nav-redirects"/>&nbsp;
           </a>
@@ -81,7 +83,9 @@ class Header extends Component {
           <a href = "https://www.instagram.com/chasingplastics/" target = "_blank" className="mb-0 pb-0 nav-redirect-link">
             <img src = {insta} className = "d-none d-lg-block nav-redirects"/>&nbsp;
           </a>
-          <img src = {spotify} className = "d-none d-lg-block nav-redirects"/>
+          <a href = "https://open.spotify.com/show/0QOQzgkDBJqgGbGtNkqsbr" target = "_blank" className="mb-0 pb-0 nav-redirect-link">
+            <img src = {spotify} className = "d-none d-lg-block nav-redirects"/>
+          </a>
           <CSSTransition
             in = {this.state.isNavOpen}
             timeout = {500}
