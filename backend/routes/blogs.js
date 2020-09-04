@@ -30,6 +30,18 @@ blogRoutes.route("/:id").get(function (req, res) {
   })
 })
 
+blogRoutes.route("/latest/:num").get((req, res) => {
+  let num = parseInt(req.params.num)
+  Blog.find(function (err, blogs) {
+    if (err) {
+      console.log(err)
+    } else {
+      res.json(blogs)
+    }
+  })
+    .sort({ _id: 1 })
+    .limit(num)
+})
 // blogRoutes.route("/add").post(function (req, res) {
 //   let blog = new Blog(req.body)
 //   blog
