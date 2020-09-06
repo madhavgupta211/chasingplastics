@@ -5,7 +5,7 @@ const bcrypt = require("bcrypt")
 const User = require("./models/user.model")
 const Blog = require("./models/blog.model")
 const Podcast = require("./models/podcast.model")
-
+const Message = require("./models/message.model")
 AdminBro.registerAdapter(AdminBroMongoose)
 const adminBro = new AdminBro({
   rootPath: "/admin",
@@ -48,6 +48,7 @@ const adminBro = new AdminBro({
     },
     Blog,
     Podcast,
+    Message,
   ],
 
   branding: {

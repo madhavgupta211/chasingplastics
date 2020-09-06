@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import { Card, CardBody, Row, Col, Label, Button, CardText} from 'reactstrap';
-import "./contact.css";
-import { Control, LocalForm } from 'react-redux-form';
-import baseUrl from '../../../baseUrl';
-var Recaptcha = require('react-recaptcha');
+import React, { Component } from "react"
+import { Card, CardBody, Row, Col, Label, Button, CardText } from "reactstrap"
+import "./contact.css"
+import { Control, LocalForm } from "react-redux-form"
+import baseUrl from "../../../baseUrl"
+var Recaptcha = require("react-recaptcha")
 
 class Contact extends Component {
   constructor(props) {
@@ -13,52 +13,59 @@ class Contact extends Component {
       lastName: "",
       email: "",
       message: "",
-      isVerified: false
-    };
+      isVerified: false,
+    }
   }
 
   handleSubmit = (values) => {
-    if(this.state.isVerified) {
-      console.log(values);
-      fetch(baseUrl + '/contact-us', {
+    if (this.state.isVerified) {
+      console.log(values)
+      fetch(baseUrl + "/contact-us", {
         method: "POST",
         body: JSON.stringify(values),
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
-        credentials: "same-origin"
+        credentials: "same-origin",
       })
-      .then(response => {
-        if(response.ok) {
-          alert("Thank you for your message. We are excited for you to join our network of chasers");
-          return response;
-        } else {
-          var error = new Error('Error ' + response.status + ': ' + response.statusText);
-          error.response = response;
-          throw error;
-        }
-      }, 
-      error => {
-          throw error;
-      })
-      .catch(error => { console.log('post Contacts', error.message); });
-      window.location.reload(false);
-    }
-    else {
-      alert("Please verify that you are a human :)");
+        .then(
+          (response) => {
+            if (response.ok) {
+              alert(
+                "Thank you for your message. We are excited for you to join our network of chasers"
+              )
+              return response
+            } else {
+              var error = new Error(
+                "Error " + response.status + ": " + response.statusText
+              )
+              error.response = response
+              throw error
+            }
+          },
+          (error) => {
+            throw error
+          }
+        )
+        .catch((error) => {
+          console.log("post Contacts", error.message)
+        })
+      window.location.reload(false)
+    } else {
+      alert("Please verify that you are a human :)")
     }
   }
 
   verifyCallback = (response) => {
-    if(response) {
+    if (response) {
       this.setState({
-        isVerified: true
-      });
+        isVerified: true,
+      })
     }
   }
 
   captchaLoaded = () => {
-    console.log("Captcha loaded");
+    console.log("Captcha loaded")
   }
 
   render() {
@@ -81,8 +88,9 @@ class Contact extends Component {
                       {/* <h6 className = "contact-info-text">
                         <span className = "fa fa-lg fa-phone my-2 mr-2 pr-1"></span>12534-678-91
                       </h6> */}
-                      <h6 className = "contact-info-text-pink mt-4">
-                        Send us a message. We will try to get back to you as soon as possible
+                      <h6 className="contact-info-text-pink mt-4">
+                        Send us a message. We will try to get back to you as
+                        soon as possible
                       </h6>
                     </CardText>
                   </CardBody>
@@ -150,22 +158,24 @@ class Contact extends Component {
                         </Label>
                       </Col>
                       <Col>
-                        <Control.textarea model=".message" 
-                         className = "contact-input form-control text-center text-lg-left" 
-                         rows = "5" 
-                         name = "emailid" 
-                         id = "emailid" 
-                         placeholder = "Ask anything. Go on now.." />
+                        <Control.textarea
+                          model=".message"
+                          className="contact-input form-control text-center text-lg-left"
+                          rows="5"
+                          name="emailid"
+                          id="emailid"
+                          placeholder="Ask anything. Go on now.."
+                        />
                       </Col>
                     </Row>
-                    <Row className ="form-group">
+                    <Row className="form-group">
                       <Col>
-                      <Recaptcha
-                        sitekey="6LdJasUZAAAAALCU0QdYTQ7Xd_l3TXyhaj_IJ3ey"
-                        render="explicit"
-                        onloadCallback={this.captchaLoaded}
-                        verifyCallback={this.verifyCallback}
-                      />
+                        <Recaptcha
+                          sitekey="6LdJasUZAAAAALCU0QdYTQ7Xd_l3TXyhaj_IJ3ey"
+                          render="explicit"
+                          onloadCallback={this.captchaLoaded}
+                          verifyCallback={this.verifyCallback}
+                        />
                       </Col>
                     </Row>
                     <Row className="form-group">

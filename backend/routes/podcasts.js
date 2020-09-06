@@ -35,6 +35,18 @@ podcastRoutes.route("/:id").get(function (req, res) {
   })
 })
 
+podcastRoutes.route("/latest/:num").get((req, res) => {
+  let num = parseInt(req.params.num)
+  Podcast.find(function (err, blogs) {
+    if (err) {
+      console.log(err)
+    } else {
+      res.json(blogs)
+    }
+  })
+    .sort({ _id: 1 })
+    .limit(num)
+})
 // podcastRoutes.route("/add").post(function (req, res) {
 //   let podcast = new Podcast(req.body)
 //   podcast
