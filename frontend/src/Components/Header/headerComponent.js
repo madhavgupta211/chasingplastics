@@ -29,7 +29,7 @@ class Header extends Component {
           <NavbarBrand className = "mr-0">
             <Link className = "navbar-logo" to = '/home'>CHASING PLASTICS</Link>
           </NavbarBrand>
-          <a href = "https://www.instagram.com/chasingplastics/" target = "_blank" className="ml-auto mb-0 pb-0 nav-redirect-link">
+          <a href = "https://open.spotify.com/show/0QOQzgkDBJqgGbGtNkqsbr" target = "_blank" className="ml-auto mb-0 pb-0 nav-redirect-link">
             <img src = {spotify} className = "d-block d-lg-none nav-redirects"/>
           </a>&nbsp;
           <a href = "https://www.instagram.com/chasingplastics/" target = "_blank" className="mb-0 pb-0 nav-redirect-link">
