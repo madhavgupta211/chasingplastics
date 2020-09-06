@@ -90,10 +90,8 @@ class Banner extends Component {
                 <h4 className = "text-left podcast-green-sub-text">Subscribe to our podcast via:</h4>
               </div>
               <div className = "pl-4 pb-3 text-left">
-                <a className = "d-inline podcast-green-link-small"><h4 className = "green-link-small">iTunes,</h4></a>
-                <a className = "d-inline podcast-green-link-small"><h4 className = "green-link-small">Stitcher,</h4></a>
-                <a className = "d-inline podcast-green-link-small"><h4 className = "green-link-small">Google Podcast</h4></a>
-                <a className = "d-inline podcast-green-link-small"><h4 className = "green-link-small">,Spotify</h4></a>
+                <a target="_blank" href="https://podcasts.apple.com/us/podcast/chasing-plastics/id1529979334" className = "d-inline podcast-green-link-small"><h4 className = "green-link-small">iTunes,</h4></a>
+                <a target="_blank" href="https://open.spotify.com/show/0QOQzgkDBJqgGbGtNkqsbr" className = "d-inline podcast-green-link-small"><h4 className = "green-link-small">Spotify</h4></a>
               </div>
             </div>
           </div>
