@@ -112,6 +112,19 @@ class Footer extends Component {
               </div>
             </div>
           </div>
+          <hr />
+          <div className = "row d-flex align-items-center">
+            <div className = "col-lg-6">
+              <p className = "text-center text-lg-left">
+                Frontend developed by: <a className = "footer-link" target = "_blank" href = "https://github.com/madhavgupta211">madhavgupta211</a>
+              </p>
+            </div>
+            <div className = "col-lg-6">
+              <p className = "text-center text-lg-right">
+                Backend developed by: <a className = "footer-link" target = "_blank" href = "https://github.com/dwij2212">dwij2212</a> 
+              </p>
+            </div>
+          </div>
         </div>
       </footer>
     )
