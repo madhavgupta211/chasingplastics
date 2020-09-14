@@ -48,6 +48,9 @@ class Contact extends Component {
             throw error
           }
         )
+        .then(() => {
+          windows.location.reload();
+        })
         .catch((error) => {
           console.log("post Contacts", error.message)
         })
