@@ -31,7 +31,7 @@ class Contact extends Component {
       })
         .then(
           (response) => {
-            if (response.ok) {
+            if (response.status === 200) {
               alert(
                 "Thank you for your message. We are excited for you to join our network of chasers"
               )
