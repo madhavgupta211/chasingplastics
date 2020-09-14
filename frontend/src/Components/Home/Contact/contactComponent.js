@@ -25,8 +25,9 @@ class Contact extends Component {
         body: JSON.stringify(values),
         headers: {
           "Content-Type": "application/json",
+          Accept: "application/json",
         },
-        credentials: "same-origin",
+        credentials: "include",
       })
         .then(
           (response) => {
@@ -50,7 +51,7 @@ class Contact extends Component {
         .catch((error) => {
           console.log("post Contacts", error.message)
         })
-      window.location.reload(false)
+      // window.location.reload(false)
     } else {
       alert("Please verify that you are a human :)")
     }
