@@ -18,7 +18,7 @@ class Contact extends Component {
   }
 
   handleSubmit = (values) => {
-    if (this.state.isVerified) {
+    if (true) {
       console.log(values)
       fetch(baseUrl + "/contact-us", {
         method: "POST",
@@ -49,7 +49,7 @@ class Contact extends Component {
           }
         )
         .then(() => {
-          windows.location.reload();
+          window.location.reload()
         })
         .catch((error) => {
           console.log("post Contacts", error.message)
